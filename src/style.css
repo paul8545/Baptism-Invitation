@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cinzel: "Cinzel", serif;
+  --font-inter: "Inter", sans-serif;
+  --color-gold-600: #b8860b;
+  --color-gold-500: #d4af37;
+  --color-gold-400: #e6c255;
+  --color-dark-900: #0a0a0a;
+  --color-dark-800: #1a1a1a;
+  --color-light: #fafafa;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: var(--color-light);
+  color: var(--color-dark-800);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.text-gold {
+  color: var(--color-gold-600);
+}
+
+.bg-dark {
+  background-color: var(--color-light); /* mapped to light for transition */
+}
+
+/* Cinematic effects */
+.glow-gold {
+  text-shadow: 0 0 10px rgba(184, 134, 11, 0.2);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+.image-glow {
+  box-shadow: 0 0 20px rgba(184, 134, 11, 0.15);
+}
+
+/* GSAP Helper */
+.invisible-init {
+  visibility: hidden;
+}
