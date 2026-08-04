@@ -36,32 +36,71 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="py-16 px-6 relative w-full flex flex-col items-center z-10 bg-slate-50">
-    <div class="text-center mb-10 gsap-fade-up">
-      <h2 class="cinzel text-2xl md:text-3xl text-gold-600 mb-2">The Countdown Begins</h2>
-      <div class="w-12 h-[1px] bg-gold-500/50 mx-auto"></div>
-    </div>
-    
-    <div class="flex flex-wrap justify-center gap-3 md:gap-8 gsap-fade-up">
-      <div class="flex flex-col items-center glass-panel w-20 h-24 md:w-28 md:h-32 justify-center rounded-xl shadow-md border border-black/5 hover:-translate-y-1 transition-transform duration-300">
-        <span class="cinzel text-3xl md:text-5xl text-slate-900">{{ days.toString().padStart(2, '0') }}</span>
-        <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] text-gold-600 font-semibold mt-2">Days</span>
+  <section id="countdown" class="py-16 sm:py-24 px-4 sm:px-6 relative w-full flex flex-col items-center z-10">
+    <div class="max-w-3xl w-full mx-auto text-center">
+      
+      <!-- Section Tag & Title -->
+      <div class="mb-10 sm:mb-12 gsap-fade-up">
+        <span class="inline-block px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold tracking-widest uppercase text-gold-700 bg-gold-500/10 border border-gold-500/20 mb-3">
+          Until the Blessed Hour
+        </span>
+        <h2 class="cinzel text-2xl sm:text-4xl text-slate-900 font-bold tracking-wide">
+          The Sacred <span class="text-gold-gradient font-extrabold">Countdown</span>
+        </h2>
+        <p class="text-slate-500 text-xs sm:text-sm font-light mt-2 max-w-md mx-auto">
+          Counting down every blessed moment until we gather in joy and faith.
+        </p>
       </div>
       
-      <div class="flex flex-col items-center glass-panel w-20 h-24 md:w-28 md:h-32 justify-center rounded-xl shadow-md border border-black/5 hover:-translate-y-1 transition-transform duration-300">
-        <span class="cinzel text-3xl md:text-5xl text-slate-900">{{ hours.toString().padStart(2, '0') }}</span>
-        <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] text-gold-600 font-semibold mt-2">Hours</span>
+      <!-- HUD Countdown Cards Grid -->
+      <div class="grid grid-cols-4 gap-2.5 sm:gap-6 max-w-xl mx-auto gsap-fade-up">
+        
+        <!-- Days -->
+        <div class="flex flex-col items-center justify-center p-3 sm:p-5 rounded-2xl glass-card relative overflow-hidden group hover:border-gold-500/40 transition-all duration-300">
+          <div class="absolute -top-6 -right-6 w-12 h-12 bg-gold-400/15 rounded-full blur-lg group-hover:bg-gold-400/30 transition-all"></div>
+          <span class="cinzel text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
+            {{ days.toString().padStart(2, '0') }}
+          </span>
+          <span class="text-[9px] sm:text-[11px] uppercase tracking-widest text-gold-600 font-bold mt-1.5 sm:mt-2">
+            Days
+          </span>
+        </div>
+        
+        <!-- Hours -->
+        <div class="flex flex-col items-center justify-center p-3 sm:p-5 rounded-2xl glass-card relative overflow-hidden group hover:border-gold-500/40 transition-all duration-300">
+          <div class="absolute -top-6 -right-6 w-12 h-12 bg-gold-400/15 rounded-full blur-lg group-hover:bg-gold-400/30 transition-all"></div>
+          <span class="cinzel text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
+            {{ hours.toString().padStart(2, '0') }}
+          </span>
+          <span class="text-[9px] sm:text-[11px] uppercase tracking-widest text-gold-600 font-bold mt-1.5 sm:mt-2">
+            Hours
+          </span>
+        </div>
+        
+        <!-- Minutes -->
+        <div class="flex flex-col items-center justify-center p-3 sm:p-5 rounded-2xl glass-card relative overflow-hidden group hover:border-gold-500/40 transition-all duration-300">
+          <div class="absolute -top-6 -right-6 w-12 h-12 bg-gold-400/15 rounded-full blur-lg group-hover:bg-gold-400/30 transition-all"></div>
+          <span class="cinzel text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
+            {{ minutes.toString().padStart(2, '0') }}
+          </span>
+          <span class="text-[9px] sm:text-[11px] uppercase tracking-widest text-gold-600 font-bold mt-1.5 sm:mt-2">
+            Mins
+          </span>
+        </div>
+        
+        <!-- Seconds -->
+        <div class="flex flex-col items-center justify-center p-3 sm:p-5 rounded-2xl glass-card relative overflow-hidden group hover:border-gold-500/40 transition-all duration-300">
+          <div class="absolute -top-6 -right-6 w-12 h-12 bg-gold-400/15 rounded-full blur-lg group-hover:bg-gold-400/30 transition-all"></div>
+          <span class="cinzel text-2xl sm:text-4xl md:text-5xl font-bold text-gold-600 tracking-tight">
+            {{ seconds.toString().padStart(2, '0') }}
+          </span>
+          <span class="text-[9px] sm:text-[11px] uppercase tracking-widest text-gold-600 font-bold mt-1.5 sm:mt-2">
+            Secs
+          </span>
+        </div>
+
       </div>
-      
-      <div class="flex flex-col items-center glass-panel w-20 h-24 md:w-28 md:h-32 justify-center rounded-xl shadow-md border border-black/5 hover:-translate-y-1 transition-transform duration-300">
-        <span class="cinzel text-3xl md:text-5xl text-slate-900">{{ minutes.toString().padStart(2, '0') }}</span>
-        <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] text-gold-600 font-semibold mt-2">Mins</span>
-      </div>
-      
-      <div class="flex flex-col items-center glass-panel w-20 h-24 md:w-28 md:h-32 justify-center rounded-xl shadow-md border border-black/5 hover:-translate-y-1 transition-transform duration-300">
-        <span class="cinzel text-3xl md:text-5xl text-slate-900">{{ seconds.toString().padStart(2, '0') }}</span>
-        <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] text-gold-600 font-semibold mt-2">Secs</span>
-      </div>
+
     </div>
   </section>
 </template>

@@ -17,11 +17,11 @@ const onMouseMove = (e: MouseEvent) => {
 const onMouseOver = (e: MouseEvent) => {
   const target = e.target as HTMLElement;
   if (cursorOutline.value) {
-    if (target.closest('a, button, input, label, .glass-panel')) {
+    if (target.closest('a, button, input, label, select, textarea, .glass-panel, .glass-card')) {
       gsap.to(cursorOutline.value, { 
         scale: 1.5, 
-        backgroundColor: 'rgba(212,175,55,0.1)', 
-        borderColor: 'rgba(212,175,55,0.8)',
+        backgroundColor: 'rgba(212,175,55,0.12)', 
+        borderColor: 'rgba(212,175,55,0.9)',
         duration: 0.2 
       });
     } else {
@@ -36,15 +36,15 @@ const onMouseOver = (e: MouseEvent) => {
 };
 
 onMounted(() => {
-  window.addEventListener('mousemove', onMouseMove);
-  window.addEventListener('mouseover', onMouseOver);
-  document.body.style.cursor = 'none';
-  
-  // Ensure default cursor doesn't show on interactive elements
-  const style = document.createElement('style');
-  style.id = 'hide-cursor';
-  style.innerHTML = `* { cursor: none !important; }`;
-  document.head.appendChild(style);
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mouseover', onMouseOver);
+    
+    const style = document.createElement('style');
+    style.id = 'hide-cursor';
+    style.innerHTML = `@media (hover: hover) and (pointer: fine) { * { cursor: none !important; } }`;
+    document.head.appendChild(style);
+  }
 });
 
 onUnmounted(() => {
