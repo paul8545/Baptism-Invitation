@@ -47,9 +47,9 @@ onUnmounted(() => {
       
       <!-- Background Image Sequence -->
       <div class="absolute inset-0 w-full h-full bg-white">
-        <img class="img-1 absolute inset-0 w-full h-full object-cover z-10 opacity-70" src="/images/evah_child.jpg" alt="Evah 1" />
-        <img class="img-2 absolute inset-0 w-full h-full object-cover z-20 opacity-0" src="/images/baby2.jpg" alt="Evah 2" />
-        <img class="img-3 absolute inset-0 w-full h-full object-cover z-30 opacity-0" src="/images/baby3.jpg" alt="Evah 3" />
+        <img class="img-1 absolute inset-0 w-full h-full object-cover z-10 opacity-70" src="/images/hero1.jpg" alt="Evah 1" />
+        <img class="img-2 absolute inset-0 w-full h-full object-cover z-20 opacity-0" src="/images/hero2.jpg" alt="Evah 2" />
+        <img class="img-3 absolute inset-0 w-full h-full object-cover z-30 opacity-0" src="/images/hero3.jpg" alt="Evah 3" />
       </div>
 
       <!-- Vignette Overlay to make text readable -->
