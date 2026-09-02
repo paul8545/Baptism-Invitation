@@ -3,21 +3,21 @@ import TiltCard from './TiltCard.vue';
 
 const familyMembers = [
   {
-    name: 'Roice Varghese',
+    name: 'Roice P Varghese',
     role: 'Father',
     image: '/images/roice_father.jpg',
     badge: 'Proud Father',
     quote: 'Guiding with devotion, strength & prayer.'
   },
   {
-    name: 'Jolsna',
+    name: 'Josna Mariam Easow',
     role: 'Mother',
     image: '/images/jolsna_mother.jpg',
     badge: 'Loving Mother',
     quote: 'Nurturing with grace, faith & gentle love.'
   },
   {
-    name: 'Kunjatta',
+    name: 'Norah Elza Roice',
     role: 'Sister',
     image: '/images/kunjatta_sister.jpg',
     badge: 'Adoring Sister',

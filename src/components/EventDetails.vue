@@ -8,7 +8,7 @@ const handleAddToCalendar = () => {
 };
 
 const handleCall = () => {
-  window.location.href = "tel:+353000000000";
+  window.location.href = "tel:+353894873163";
 };
 </script>
 
@@ -184,7 +184,7 @@ const handleCall = () => {
             <span class="text-xl animate-bounce">🎂</span>
           </div>
           <h3 class="cinzel text-2xl sm:text-3xl font-bold text-slate-900 leading-snug">
-            Celebrating <span class="text-gold-gradient font-black">Kunjatta's Birthday</span>
+            Celebrating <span class="text-gold-gradient font-black">Norah Elza Roice's Birthday</span>
           </h3>
           <p class="text-slate-600 text-sm font-medium mt-3 max-w-lg leading-relaxed">
             The joy multiplies! Join us in making this beautiful day even more special as we cut the cake and celebrate the birthday of Evah's loving elder sister during the feast.
