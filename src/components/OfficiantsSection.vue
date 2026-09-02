@@ -18,7 +18,7 @@ const priests = [
   {
     name: 'Fr. Dr. Jobymon Skaria',
     title: 'Priest',
-    image: '/images/priest_3.jpg',
+    image: '/images/fr_jobymon_skaria.jpg',
     badge: 'Co-Celebrant'
   }
 ];

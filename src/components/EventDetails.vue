@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import MagneticButton from './MagneticButton.vue';
 
-const googleCalendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Evah's+Holy+Baptism&dates=20260913T090000Z/20260913T130000Z&details=The+Holy+Baptism+of+Evah+Eliza+Roice+at+St.+Mary's+Jacobite+Syrian+Orthodox+Church,+Waterford,+followed+by+Feast+at+Elite+Events+and+Caterers,+Carrigeen.&location=St.+Mary's+Jacobite+Syrian+Orthodox+Church,+Waterford,+Ireland";
+const googleCalendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Evah's+Holy+Baptism&dates=20260913T090000Z/20260913T150000Z&details=The+Holy+Baptism+of+Evah+Eliza+Roice+at+St.+Mary's+Jacobite+Syrian+Orthodox+Church,+Waterford,+followed+by+Feast+at+Elite+Events+and+Caterers,+Carrigeen.&location=St.+Mary's+Jacobite+Syrian+Orthodox+Church,+Waterford,+Ireland";
 
 const handleAddToCalendar = () => {
   window.open(googleCalendarUrl, '_blank');
@@ -137,8 +137,8 @@ const handleCall = () => {
                 </svg>
               </div>
               <div>
-                <p class="text-xs sm:text-sm font-bold text-slate-900">Celebration & Dining</p>
-                <p class="text-gold-700 text-xs font-semibold">Immediately following the Church Ceremony</p>
+                <p class="text-xs sm:text-sm font-bold text-slate-900">Sunday, 13 September 2026</p>
+                <p class="text-gold-700 text-xs font-semibold">1:00 PM to 4:00 PM</p>
               </div>
             </div>
           </div>
@@ -168,6 +168,33 @@ const handleCall = () => {
           </a>
         </div>
 
+      </div>
+
+      <!-- Double Celebration Banner -->
+      <div class="mt-8 sm:mt-12 w-full max-w-5xl mx-auto glass-card p-6 sm:p-10 rounded-3xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 gsap-fade-up hover:border-gold-500/40 transition-all duration-500 shadow-xl group">
+        <div class="absolute -top-16 -left-16 w-48 h-48 bg-gold-400/20 rounded-full blur-3xl pointer-events-none group-hover:bg-gold-400/30 transition-colors duration-700"></div>
+        <div class="absolute -bottom-16 -right-16 w-48 h-48 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Details -->
+        <div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left z-10">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-3 py-1 rounded-full text-[10px] sm:text-xs uppercase tracking-widest font-bold text-gold-700 bg-gold-500/15 border border-gold-500/25">
+              Double Celebration
+            </span>
+            <span class="text-xl animate-bounce">🎂</span>
+          </div>
+          <h3 class="cinzel text-2xl sm:text-3xl font-bold text-slate-900 leading-snug">
+            Celebrating <span class="text-gold-gradient font-black">Kunjatta's Birthday</span>
+          </h3>
+          <p class="text-slate-600 text-sm font-medium mt-3 max-w-lg leading-relaxed">
+            The joy multiplies! Join us in making this beautiful day even more special as we cut the cake and celebrate the birthday of Evah's loving elder sister during the feast.
+          </p>
+        </div>
+
+        <!-- Birthday Girl Image -->
+        <div class="shrink-0 z-10 w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-4 border-white shadow-2xl rotate-3 group-hover:-rotate-2 group-hover:scale-105 transition-all duration-500">
+          <img src="/images/kunjatta_sister.jpg" alt="Kunjatta Birthday" class="w-full h-full object-cover object-top" />
+        </div>
       </div>
 
       <!-- Action Buttons Bar -->
