@@ -70,7 +70,7 @@ const handleCall = () => {
               </div>
               <div>
                 <p class="text-xs sm:text-sm font-bold text-slate-900">Sunday, 13 September 2026</p>
-                <p class="text-gold-700 text-xs font-semibold">10:00 AM Sharp</p>
+                <p class="text-gold-700 text-xs font-semibold">8:00 AM </p>
               </div>
             </div>
           </div>
