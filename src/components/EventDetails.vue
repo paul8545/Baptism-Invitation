@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import MagneticButton from './MagneticButton.vue';
 
-const googleCalendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Evah's+Holy+Baptism&dates=20260913T090000Z/20260913T150000Z&details=The+Holy+Baptism+of+Evah+Eliza+Roice+at+St.+Mary's+Jacobite+Syrian+Orthodox+Church,+Waterford,+followed+by+Feast+at+Elite+Events+and+Caterers,+Carrigeen.&location=St.+Mary's+Jacobite+Syrian+Orthodox+Church,+Waterford,+Ireland";
+const googleCalendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Evah's+Holy+Baptism&dates=20260913T070000Z/20260913T150000Z&details=The+Holy+Baptism+of+Evah+Eliza+Roice+at+St.+Mary's+Jacobite+Syrian+Orthodox+Church,+Waterford,+followed+by+Feast+at+Elite+Events+and+Caterers,+Carrigeen.&location=St.+Mary's+Jacobite+Syrian+Orthodox+Church,+Waterford,+Ireland";
 
 const handleAddToCalendar = () => {
   window.open(googleCalendarUrl, '_blank');
